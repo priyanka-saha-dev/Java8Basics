@@ -8,9 +8,10 @@ public class SteamsExample {
 
 	public static void main(String[] args) {
 
-		Integer[] numbers =  {7,0,2,8,5,1,4,3,6,9};
+		List<Integer> numberList = Arrays.asList(7,0,2,8,5,1,4,3,6,9);
 		
-		List<Integer> numberList = Arrays.asList(numbers);
+		//numberList.stream().forEach(a -> System.out.println(a));
+		numberList.stream().forEach(System.out::println);
 		
 		boolean containsAllEvenNumbers = numberList.stream().allMatch(num -> num%2 == 0);
 		
