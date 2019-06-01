@@ -3,7 +3,9 @@ package examples.streams;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class SteamsExample {
@@ -63,6 +65,13 @@ public class SteamsExample {
 				.reduce((a , b) -> a+ "_"+b)
 				.ifPresent(System.out::println);
 		
+		System.out.println("--------------------IntStream + boxed--------------------");
+		IntStream.range(1, 10)
+					.boxed()
+					//.filter(i -> i%2 == 0)
+					.max(Integer::compareTo)
+					.ifPresent(System.out::println);
+				
 		/*
 		 * System.out.println("Stream generate"); Stream<Date> stream =
 		 * Stream.generate(() -> new Date()); stream.forEach(System.out::println);

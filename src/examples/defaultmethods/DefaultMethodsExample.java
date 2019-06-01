@@ -1,7 +1,5 @@
 package examples.defaultmethods;
 
-import examples.common.Animal;
-
 public class DefaultMethodsExample implements Animal {
 
 	public static void main(String[] args) {

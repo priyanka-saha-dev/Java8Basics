@@ -1,4 +1,4 @@
-package examples.common;
+package examples.defaultmethods;
 
 public interface Animal {
 
